@@ -10,30 +10,36 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/styling.css" />
     <title>Gamze's Weather App</title>
   </head>
   <body>
     <div class="container">
-      <h1>Warsaw</h1>
-      <ul>
-        <li>Sunday 22:05</li>
-        <li>Cloudy</li>
+      <h1 id="city">Warsaw</h1>
+      <ul class="main city">
+        <li id="date">Sunday 22:05</li>
+        <li id="description1">Cloudy</li>
       </ul>
       <div class="row">
         <div class="col-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-            alt="currentTemp"
-            class="cloud"
-          />
-          12°C
+          <div class="degree">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+              alt="currentTemp"
+              class="cloud"
+            />
+            <div class="float-left">
+              <span class="temperature" id="temperature1"></span
+              ><span class="units"><a>ºC</a> / <a></a> </span>
+            </div>
+          </div>
         </div>
-        <div class="col-6">
-          <ul>
-            <li>Precipitation</li>
-            <li>Humidity</li>
-            <li>Wind</li>
+        <div class="col-3">
+          <ul class="details">
+            <li>Humidity:<span id="humidity"></span>%</li>
+            <li>Wind:<span id="wind"></span>km/h</li>
           </ul>
         </div>
       </div>
