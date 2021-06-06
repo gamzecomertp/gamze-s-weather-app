@@ -1,4 +1,5 @@
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let currentHour = date.getHours();
   if (currentHour < 10) {
     currentHour = `0${currentHour}`;
@@ -32,8 +33,11 @@ function displayTemperature(response) {
     response.data.wind.speed
   );
   document.querySelector("#description1").innerHTML =
-    response.data.weather[0].main;
-  document.querySelector("#date").innerHTML = response.data.dt * 1000;
+    response.data.weather[0].description;
+  console.log(response.data);
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 
 let apiKey = "66af7215126c3001af4a20c9cde9c1c1";
