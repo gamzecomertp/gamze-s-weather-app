@@ -34,7 +34,6 @@ function displayTemperature(response) {
   );
   document.querySelector("#description1").innerHTML =
     response.data.weather[0].description;
-  console.log(response.data);
   document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
   );
@@ -43,6 +42,7 @@ function displayTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "66af7215126c3001af4a20c9cde9c1c1";
