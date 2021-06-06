@@ -31,7 +31,7 @@ function displayTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#description").innerHTML =
+  document.querySelector("#description1").innerHTML =
     response.data.weather[0].main;
   document.querySelector("date").innerHTML = response.data.dt * 1000;
 }
