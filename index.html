@@ -34,13 +34,13 @@
                 type="submit"
                 value="Search"
                 class="btn btn-primary w-100"
-                id="current-button"
+                id="form-control-button"
               />
             </div>
           </div>
         </form>
         <div class="overview">
-          <h1 id="city">Warsaw</h1>
+          <h1 id="city"></h1>
           <ul class="mainCity">
             <li><span id="date"></span></li>
             <li id="description1"></li>
@@ -52,7 +52,10 @@
               <img src="" alt="currentTemp" id="icon" class="float-left" />
               <div class="float-left">
                 <span class="temperature1" id="temperature1"></span
-                ><span class="units"><a>ºC</a> / <a></a> </span>
+                ><span class="units">
+                  <a href="#" id="celcius-link" class="active">°C</a>/
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
               </div>
             </div>
           </div>

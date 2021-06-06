@@ -89,3 +89,13 @@ li:first-letter {
   position: relative;
   top: -20px;
 }
+
+.degree .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.degree .active:hover {
+  color: black;
+  text-decoration: none;
+}
