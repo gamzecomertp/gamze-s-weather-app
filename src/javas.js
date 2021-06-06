@@ -33,7 +33,7 @@ function displayTemperature(response) {
   );
   document.querySelector("#description1").innerHTML =
     response.data.weather[0].main;
-  document.querySelector("date").innerHTML = response.data.dt * 1000;
+  document.querySelector("#date").innerHTML = response.data.dt * 1000;
 }
 
 let apiKey = "66af7215126c3001af4a20c9cde9c1c1";

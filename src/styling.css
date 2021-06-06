@@ -37,5 +37,6 @@ li {
   color: (135, 135, 135);
 }
 
-li::first-letter {
+li:first-letter {
+  text-transform: capitalize;
 }
