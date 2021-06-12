@@ -10,7 +10,7 @@ body {
   padding: 40px 30px;
   display: block;
   position: relative;
-  background: #76a6b4;
+  background: #458399;
   max-width: 600px;
   border: 1px #b9c9c6;
 
@@ -19,9 +19,6 @@ body {
   margin: 50px auto;
   cursor: default;
   font-weight: 300;
-}
-background {
-  opacity: 0.1;
 }
 
 .weather-app {
