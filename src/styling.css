@@ -98,3 +98,21 @@ li:first-letter {
   color: black;
   text-decoration: none;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-date {
+  font-size: 16px;
+  opacity: 0.6px;
+}
+
+.forecast-temp-min {
+  opacity: 0.5;
+}
+
+.forecast-temperatures {
+  font-size: 14px;
+}
