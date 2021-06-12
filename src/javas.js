@@ -20,7 +20,32 @@ function formatDate(timestamp) {
   let currentDay = days[date.getDay()];
   return `Last updated: ${currentDay} ${currentHour}:${currentMinutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
 
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="forecast-date">${day}</div>
+        <img src=
+          "https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="" width="30px"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="forecast-temp-max"> 18° </span>
+          <span class="forecast-temp-min"> 12° </span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature1");
   celciusTemperature = response.data.main.temp;
@@ -85,3 +110,4 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelTemperature);
 
 searchCity("Warsaw");
+displayForecast();
